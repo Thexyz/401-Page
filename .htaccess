@@ -1,0 +1,9 @@
+#default index page
+DirectoryIndex index.html
+ 
+#PHP code in HTML file
+AddHandler application/x-httpd-php .html .htm
+
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://401.thexyz.com/$1 [R,L]
